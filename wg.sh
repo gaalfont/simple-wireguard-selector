@@ -63,6 +63,19 @@ connector
 
 connector () {
 sudo wg-quick up $conf
+end
+}
+
+end () {
+echo "" 
+echo ""
+echo "Press enter to disconnect."
+read dc 
+echo ""
+echo "Disconnecting.."
+sudo wg-quick down $conf
+echo ""
+startup
 }
 
 startup () { 
